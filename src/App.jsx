@@ -64,10 +64,12 @@ function App() {
     if (id === 'top') { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
     if (id === 'contato') {
       window.dispatchEvent(new CustomEvent('openHeroForm'));
-      setTimeout(() => {
-        const form = document.getElementById('hero-form');
-        if (form) form.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 50);
+      if (!isMobile) {
+        setTimeout(() => {
+          const form = document.getElementById('hero-form');
+          if (form) form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 50);
+      }
       return;
     }
     const el = document.getElementById(id);

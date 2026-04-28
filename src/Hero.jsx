@@ -79,12 +79,8 @@ function Hero({ onRequestCollect, isMobile }) {
   const [showMobileForm, setShowMobileForm] = React.useState(false);
 
   const handleCTA = () => {
-    if (isMobile && !showMobileForm) {
+    if (isMobile) {
       setShowMobileForm(true);
-      setTimeout(() => {
-        const form = document.getElementById('hero-form');
-        if (form) form.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 50);
     } else {
       onRequestCollect();
     }
@@ -157,10 +153,32 @@ function Hero({ onRequestCollect, isMobile }) {
           </div>
         </div>
 
-        {(!isMobile || showMobileForm) && (
+        {/* Desktop inline form */}
+        {!isMobile && (
           <HeroForm onSubmit={onRequestCollect}/>
         )}
       </div>
+
+      {/* Mobile Modal Form */}
+      {isMobile && showMobileForm && (
+        <div style={{
+          position: 'fixed', inset: 0, zIndex: 100,
+          background: 'rgba(11,26,46,0.8)', backdropFilter: 'blur(4px)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          padding: 20, overflowY: 'auto'
+        }} onClick={() => setShowMobileForm(false)}>
+          <div style={{ width: '100%', maxWidth: 400, position: 'relative', marginTop: 'auto', marginBottom: 'auto' }} onClick={e => e.stopPropagation()}>
+            <button onClick={() => setShowMobileForm(false)} style={{
+              position: 'absolute', top: 16, right: 16, background: 'transparent',
+              border: 'none', fontSize: 24, color: 'var(--muted)', cursor: 'pointer', zIndex: 10,
+            }}>&times;</button>
+            <HeroForm onSubmit={() => {
+              setShowMobileForm(false);
+              onRequestCollect();
+            }}/>
+          </div>
+        </div>
+      )}
 
       {/* scroll hint */}
       <div className="resp-hide" style={{
