@@ -96,7 +96,7 @@ function Placeholder({ label, h = 320, tone = 'ink', caption }) {
 function Logo({ height = 42, variant = 'color' }) {
   return (
     <div style={{ display: 'inline-flex', alignItems: 'center', gap: 12 }}>
-      <img src="assets/logo-assouza.png" alt="A.S. SOUZA Logística Ambiental"
+      <img src="assets/logo-assouza.webp" alt="A.S. SOUZA Logística Ambiental"
         style={{ height, width: 'auto', display: 'block',
           filter: variant === 'white' ? 'brightness(0) invert(1)' : 'none' }} />
     </div>
