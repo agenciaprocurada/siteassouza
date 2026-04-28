@@ -10,7 +10,10 @@ function About() {
     <section id="sobre" className="resp-section" style={aboutStyles.section} data-screen-label="About">
       <div className="resp-grid" style={aboutStyles.grid}>
         <div style={{ position: 'relative' }}>
-          <Placeholder label="FROTA · caminhão A.S. SOUZA em operação" h={560} tone="ink"/>
+          <img src="./assets/fundo-topo-assouza.webp" alt="Frota A.S. SOUZA" style={{
+            width: '100%', height: 560, objectFit: 'cover', borderRadius: 24, display: 'block',
+            boxShadow: '0 40px 100px rgba(0,0,0,0.1)'
+          }} />
 
           {/* Overlaid brand stripe */}
           <div className="resp-static resp-w100" style={{

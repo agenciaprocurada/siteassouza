@@ -93,9 +93,7 @@ function Footer({ onNav }) {
           <div>
             <div style={footerStyles.h}>Atendimento</div>
             <div style={{ fontSize: 14, lineHeight: 1.7, color: 'rgba(255,255,255,0.7)' }}>
-              Seg a Sex · 08h–18h<br/>
-              Sábado · 08h–12h<br/>
-              Emergência 24h via WhatsApp
+              Seg a Sex · 08h–18h
             </div>
             <a onClick={() => window.dispatchEvent(new CustomEvent('openWhatsAppModal'))} style={{
               display: 'inline-flex', alignItems: 'center', gap: 8,

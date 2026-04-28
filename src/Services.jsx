@@ -157,7 +157,19 @@ function Services() {
           </div>
 
           <div style={{ position: 'relative', animation: 'fadein 0.4s ease' }}>
-            <Placeholder label={svc.img} h={520} tone="orange" caption={`${svc.tab.toUpperCase()} · FOTO REAL`}/>
+            {svc.id === 'destinacao' ? (
+              <img src="./assets/pavilhao-armazenamento.webp" alt={svc.tab} style={{
+                width: '100%', height: 520, objectFit: 'cover', borderRadius: 24, display: 'block',
+                boxShadow: '0 40px 100px rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.05)'
+              }} />
+            ) : svc.id === 'coleta' ? (
+              <img src="./assets/coleta.webp" alt={svc.tab} style={{
+                width: '100%', height: 520, objectFit: 'cover', borderRadius: 24, display: 'block',
+                boxShadow: '0 40px 100px rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.05)'
+              }} />
+            ) : (
+              <Placeholder label={svc.img} h={520} tone="orange" caption={`${svc.tab.toUpperCase()} · FOTO REAL`}/>
+            )}
             {/* decorative floating card */}
             <div style={{
               position: 'absolute', bottom: -30, left: -30,

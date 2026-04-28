@@ -100,8 +100,7 @@ function StatStrip() {
   const items = [
     { t: 'Coletores autorizados ANP', v: 'Resolução 20/2009' },
     { t: 'Cobertura regional', v: 'RS + SC' },
-    { t: 'Emissão de CDF', v: 'até 10 dias' },
-    { t: 'Atendimento emergencial', v: 'SLA 4h' },
+    { t: 'Emissão de CDF', v: 'até 10 dias úteis' },
   ];
   return (
     <div style={{
@@ -110,7 +109,7 @@ function StatStrip() {
     }}>
       <div className="resp-grid-2 resp-inner" style={{
         maxWidth: 1400, margin: '0 auto', padding: '28px 48px',
-        display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 40,
+        display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40,
       }}>
         {items.map((it, i) => (
           <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
