@@ -59,7 +59,7 @@ function Footer({ onNav }) {
               marginTop: 24, fontFamily: 'JetBrains Mono, monospace', fontSize: 10,
               letterSpacing: '0.14em', color: 'rgba(255,255,255,0.4)',
             }}>
-              CNPJ 13.374.901/0001-85<br/>
+              CNPJ 08.874.903/0001-03<br/>
               A.S. SOUZA TRANSPORTES LTDA
             </div>
           </div>
@@ -67,10 +67,10 @@ function Footer({ onNav }) {
           <div>
             <div style={footerStyles.h}>Escritório</div>
             <div style={{ fontSize: 14, lineHeight: 1.7, color: 'rgba(255,255,255,0.7)' }}>
-              Rua Carlos Chagas, 261<br/>
+              Rua Carlos Chagas, 317<br/>
               Bairro Industrial<br/>
               Alvorada — RS<br/>
-              CEP 94836-280
+              CEP 94836-200
             </div>
           </div>
 
